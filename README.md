@@ -152,7 +152,7 @@ p{margin:1.5em 0;transition:all .3s ease;}
 
 <script type="text/javascript">
        async function pertama(){
-       	 audio = new Audio('https://www.youtube.com/watch?v=ZmuI81Ld5cI');
+       	 audio = new Audio('Molecools077-patch-1');
        
             akhirkata = "Semoga di hari bertambahnya usiamu ini, kamu menjadi pribadi yang lebih baik 🥳      ";
             akhirkata2 = "Happy Birthday! 🎉";
