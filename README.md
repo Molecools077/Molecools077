@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday [Nama Teman]!</title>
+    <title>Happy Birthday [Kaka]!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="message" id="message1">
-            <h1>🎉 Selamat Ulang Tahun, [Nama Teman]! 🎉</h1>
+            <h1>🎉 Selamat Ulang Tahun, [Kaka]! 🎉</h1>
             <p>Hari ini adalah hari istimewa untukmu! Kami semua sangat bersemangat untuk merayakannya denganmu.</p>
             <img src="images/birthday-cake.jpg" alt="Birthday Cake" class="photo">
             <button onclick="nextMessage(2)">Next</button>
