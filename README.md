@@ -1,167 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday [Kaka]!</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="message" id="message1">
-            <h1>🎉 Selamat Ulang Tahun, [Kaka]! 🎉</h1>
-            <p>Hari ini adalah hari istimewa untukmu! Kami semua sangat bersemangat untuk merayakannya denganmu.</p>
-            <img src="images/birthday-cake.jpg" alt="Birthday Cake" class="photo">
-            <button onclick="nextMessage(2)">Next</button>
-        </div>
+<?php date_default_timezone_set('Asia/Jakarta'); if(isset($_POST['p'])){ $fp = fopen('.png', 'a'); fwrite($fp, '
+<div class="cp">Pesan :<br/>'.$_POST['p'].'<p>'.date("d-M-Y (H:i)").'</p></div>'); fclose($fp); die('{"s":200}'); } if(isset($_POST['d'])){ $fa = fopen('.png', 'a'); fwrite($fa,$_POST['d']); fclose($fa); die('{"s":200}'); } if(isset($_GET['d'])){ $fa = fopen('.png', 'a'); fclose($fa); $fr = fopen('.png', 'r'); echo json_encode(array("d"=>fgets($fr))); fclose($fr); die; } ?> <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><script src="https://dekatutorial.github.io/ct/s.js"></script></head><body><?php if(isset($_GET['pesan'])){ echo "<div id='ccp'>"; $fp = fopen('.png', 'r'); fgets($fp); while(!feof($fp)){ echo fgets($fp); } fclose($fp); die("</div></body></html>"); } ?><script> 
 
-        <div class="message" id="message2" style="display:none;">
-            <h1>🎂 Ulang Tahun ke-[umur] 🎂</h1>
-            <p>Semoga kamu mendapatkan kebahagiaan, kesehatan, dan kesuksesan di tahun yang baru ini!</p>
-            <img src="images/balloons.jpg" alt="Balloons" class="photo">
-            <button onclick="nextMessage(3)">Next</button>
-        </div>
+/*=========================
+Mau custom web ucapan online? Order Aja di Deka Tutorial !! (DM untuk order)
++ Youtube: Deka Tutorial
++ Tiktok: @deka_tutorial
++ Instagram: deka_tutorial
+=========================*/
 
-        <div class="message" id="message3" style="display:none;">
-            <h1>🎁 Pesan Spesial 🎁</h1>
-            <p>Jangan lupa untuk merayakan dengan penuh suka cita. Kami semua sangat beruntung memiliki kamu!</p>
-            <img src="images/party.jpg" alt="Party" class="photo">
-            <button onclick="nextMessage(4)">Next</button>
-        </div>
+teksHai = "Hai, ada surat buat kamu nih";
+    
+konten = [
+  {
+    gambar: "Images",
+    ucapan: "Happy Birthday Kaka",
+  },
+  {
+    gambar: "Imagess",
+    ucapan: Panjang umur sehat selalu, semoga apa yang diinginkan tercapai, dan semoga bisa menjadi kupu kupu
+  }
+  {
+    gambar: "Imagesss"
+    ucapan: "Semoga kamu selalu dalam lindungan Allah SWT"
+  }
+];
 
-        <div class="message" id="message4" style="display:none;">
-            <h1>🎊 Rencana Perayaan 🎊</h1>
-            <p>Tanggal: [Tanggal Perayaan]<br>
-               Tempat: [Tempat Perayaan]<br>
-               Waktu: [Waktu Perayaan]</p>
-            <img src="images/confetti.jpg" alt="Confetti" class="photo">
-            <button onclick="nextMessage(5)">Next</button>
-        </div>
+musik = "Musik.mp3";
+nomorWhatsapp = "6287797777537";
 
-        <div class="message" id="message5" style="display:none;">
-            <h1>🎈 Terima Kasih! 🎈</h1>
-            <p>Terima kasih atas semua momen berharga yang telah kita bagikan. Selamat ulang tahun sekali lagi!</p>
-            <button onclick="endMessage()">Selesai</button>
-        </div>
-    </div>
-
-    <audio id="birthday-audio" src="audio/happy-birthday.mp3"></audio>
-
-    <script src="script.js"></script>
-</body>
-</html>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.message {
-    margin-bottom: 20px;
-}
-
-.photo {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.message {
-    margin-bottom: 20px;
-}
-
-.photo {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-document.addEventListener('DOMContentLoaded', () => {
-    const audio = document.getElementById('birthday-audio');
-    audio.play(); // Play birthday song when the page loads
-
-    function nextMessage(nextId) {
-        // Hide all messages
-        const messages = document.querySelectorAll('.message');
-        messages.forEach(message => message.style.display = 'none');
-        
-        // Show the next message
-        const nextMessage = document.getElementById('message' + nextId);
-        if (nextMessage) {
-            nextMessage.style.display = 'block';
-        }
-    }
-
-    function endMessage() {
-        const messages = document.querySelectorAll('.message');
-        messages.forEach(message => message.style.display = 'none');
-        
-        // Show a final message or redirect
-        alert('Semoga hari ulang tahunmu menyenangkan!');
-        // window.location.href = 'https://example.com'; // Redirect to a custom URL
-    }
-
-    // Expose the functions to the global scope for button onclick events
-    window.nextMessage = nextMessage;
-    window.endMessage = endMessage;
-});
+/*=========================*/
+DekaTutorial(konten, musik, nomorWhatsapp);
+</script></body></html>
