@@ -152,7 +152,7 @@ p{margin:1.5em 0;transition:all .3s ease;}
 
 <script type="text/javascript">
        async function pertama(){
-       	 audio = new Audio('https://feeldreams.github.io/guetau.mp3');
+       	 audio = new Audio('Pamungkas - Happy Birthday To You (Official Lyrics Video).mp3');
        
             akhirkata = "Semoga di hari bertambahnya usiamu ini, kamu menjadi pribadi yang lebih baik 🥳      ";
             akhirkata2 = "Happy Birthday! 🎉";
